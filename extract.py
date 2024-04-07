@@ -13,7 +13,7 @@ def fetch_data(client):
     clickhouse_query = """
     SELECT pickup_datetime, dropoff_datetime, passenger_count, trip_distance, payment_type, fare_amount, tip_amount
     FROM tripdata
-    WHERE year(pickup_date) = 2010
+    WHERE year(pickup_date) = 2015
             """
 
     # Fetch metrics data
