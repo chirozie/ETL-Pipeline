@@ -3,7 +3,7 @@ import os
 
 #Importing custom fuctions - metric query function and truncate SQLite DB function
 from extract import fetch_data
-from load import load_csv_to_postgrest
+from load import load_csv_to_postgres
 from helpers import get_client
 
 #get clickhouse client
@@ -18,7 +18,7 @@ def main():
     fetch_data(client=client)
 
     # load data
-   # load_csv_to_postgres('tripdata.csv', 'tripdata')
+    load_csv_to_postgres('tripdata.csv', 'tripdata')
 
     print('pipeline completed successfully')
 
